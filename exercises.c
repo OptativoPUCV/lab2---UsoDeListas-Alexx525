@@ -71,7 +71,7 @@ int sumaLista(List *L)
 
     suma = *(int*) elem + suma;
 
-    elem = first(L);
+    popBack(L);
   }
   
   return suma;
