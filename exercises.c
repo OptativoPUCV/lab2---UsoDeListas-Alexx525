@@ -70,7 +70,7 @@ int sumaLista(List *L)
   {
     elem = (int*)first(L);
     
-    suma += elem;
+    suma = elem + suma;
 
     elem = next(L);
   }
