@@ -125,13 +125,12 @@ void copia_pila(Stack* P1, Stack* P2)
   while (P1 != NULL)
   {
     push(P3, top(P1));
-    popCurrent(P1);
-  }
+    popFront(List *L)
 
   while (P3 != NULL)
   {
     push(P2, top(P3));
-    popCurrent(P3);
+    popFront(P3);
   }
 }
 
