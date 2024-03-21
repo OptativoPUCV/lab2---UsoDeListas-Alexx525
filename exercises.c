@@ -63,15 +63,22 @@ retorne la suma de sus elementos.
 int sumaLista(List *L)
 {
   int suma = 0;
-  void* elem;
+  void* elem = first(L);;
 
-  for (int i = 0; i <= get_size(L); i++)
+  /*for (int i = 0; i <= get_size(L); i++)
   {
     elem = first(L);
 
     suma = *(int*) elem + suma;
 
     popFront(L);
+  }*/
+
+  while(elem != NULL)
+  {
+    suma = *(int*) elem + suma;
+
+    elem = next(L);
   }
   
   return suma;
