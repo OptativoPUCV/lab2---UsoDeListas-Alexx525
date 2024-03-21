@@ -4,3 +4,24 @@ Thu 21 Mar 2024 08:17:45 PM UTC:
  tests:  1|4
 total_score: 10/70
 d92ee0f
+Thu 21 Mar 2024 08:24:34 PM UTC: 
+ exercises.c | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:67:23: error: implicit declaration of function ‘length’ [-Werror=implicit-function-declaration]
+   67 |   for (int i = 0; i < length(L); i++)
+      |                       ^~~~~~
+exercises.c:69:20: error: implicit declaration of function ‘get’; did you mean ‘getw’? [-Werror=implicit-function-declaration]
+   69 |     suma += *(int*)get(L, i);
+      |                    ^~~
+      |                    getw
+exercises.c:69:14: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+   69 |     suma += *(int*)get(L, i);
+      |              ^
+exercises.c:72:10: error: ‘suma’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   72 |   return suma;
+      |          ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0a62d4f
