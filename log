@@ -25,3 +25,20 @@ exercises.c:72:10: error: ‘suma’ may be used uninitialized in this function 
 cc1: all warnings being treated as errors
 Compilation failed
 0a62d4f
+Thu 21 Mar 2024 08:28:51 PM UTC: 
+ exercises.c | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:69:15: error: comparison between pointer and integer [-Werror]
+   69 |   while (elem != NULL)
+      |               ^~
+exercises.c:71:10: error: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   71 |     elem = (int*)first(L);
+      |          ^
+exercises.c:75:10: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   75 |     elem = next(L);
+      |          ^
+cc1: all warnings being treated as errors
+Compilation failed
+7a1b828
