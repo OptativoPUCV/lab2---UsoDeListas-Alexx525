@@ -848,3 +848,8 @@ exercises.c:126:15: error: ‘elem’ is used uninitialized [-Werror=uninitializ
 cc1: all warnings being treated as errors
 Compilation failed
 fbc8840
+Thu 21 Mar 2024 09:06:59 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+19f541c
