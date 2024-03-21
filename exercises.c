@@ -99,12 +99,15 @@ void eliminaElementos(List*L, int elem)
   
   while (elemento != NULL)
   {
-    if (elem == (int*)elemento)
+    if (elem == *(int*)elemento)
     {
       popCurrent(L);
+      elemento = next(L);
     }
-    
-    next(L);
+    else
+    {
+      elemento = next(L);
+    }
   }
 }
 
