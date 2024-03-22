@@ -173,17 +173,29 @@ int parentesisBalanceados(char *cadena)
         pop(P1);
         
       }
+      else
+      {
+        return 0;
+      }
       
       if (cadena[i] == ']' && elem == '[')
       {
         pop(P1);
 
       }
+      else
+      {
+        return 0;
+      }
 
       if (cadena[i] == '}' && elem == '{')
       {
         pop(P1);
 
+      }
+      else
+      {
+        return 0;
       }
     }
   }
