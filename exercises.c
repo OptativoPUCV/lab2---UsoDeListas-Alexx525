@@ -182,7 +182,7 @@ int parentesisBalanceados(char *cadena)
 
   else
     return 0;
-  }
+}
   
   /*Stack* P1 = create_stack();
   
@@ -221,5 +221,5 @@ int parentesisBalanceados(char *cadena)
   {
     return 0;
   }*/
-}
+
 
