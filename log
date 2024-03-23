@@ -962,3 +962,18 @@ Sat 23 Mar 2024 12:03:10 AM UTC:
  tests:  9|0
 total_score: 70/70
 41ded87
+Sat 23 Mar 2024 12:12:15 AM UTC: 
+ exercises.c | 67 ++++++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 35 insertions(+), 32 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:226:1: error: control reaches end of non-void function [-Werror=return-type]
+  226 | }
+      | ^
+At top level:
+exercises.c:155:7: error: ‘parentesisBalanceados’ defined but not used [-Werror=unused-function]
+  155 |   int parentesisBalanceados(char *cadena)
+      |       ^~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+27f9b78
