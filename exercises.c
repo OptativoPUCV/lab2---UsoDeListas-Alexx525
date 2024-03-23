@@ -153,6 +153,46 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 int parentesisBalanceados(char *cadena)
 {
   Stack* P1 = create_stack();
+  int balanceado = 1;
+  for (int i = 0; i < strlen(cadena); i++)
+  {
+    if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')
+    {
+      push(P1, &cadena[i]);
+    }
+    else
+    {
+      if (cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}')
+      {
+        if (cadena[i] == ')' && *(char*)top(P1) == '(')
+        {
+          pop(P1);
+        }
+        
+        if (cadena[i] == ']' && *(char*)top(P1) == '[')
+        {
+          pop(P1);
+        }
+        
+        if (cadena[i] == '}' && *(char*)top(P1) == '{')
+        {
+          pop(P1);
+        }
+      }
+    }
+  }
+  if (top(P1) == NULL)
+  {
+    balanceado = 1;
+  }
+  else
+  {
+    balanceado = 0;
+  }
+  
+  return balanceado;
+  
+  /*Stack* P1 = create_stack();
   int i = 0;
   
   while (cadena[i] != '\0')
@@ -165,13 +205,13 @@ int parentesisBalanceados(char *cadena)
       char elem = *(char*)top(P1);
       
       if ((cadena[i] == ')') && (elem == '('))
-        popCurrent(P1);
+        pop(P1);
       
       if ((cadena[i] == ']') && (elem == '['))
-        popCurrent(P1);
+        pop(P1);
       
       if ((cadena[i] == '}') && (elem == '{'))
-        popCurrent(P1);
+        pop(P1);
 
     }
     i++;
@@ -181,6 +221,6 @@ int parentesisBalanceados(char *cadena)
     return 0;
   
   else
-    return 1;
+    return 1;*/
 }
 
